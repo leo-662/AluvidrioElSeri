@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluvidrio El Seri | Expertos en Aluminio y Vidrio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0084cc; 
+            --brand-dark: #0f172a;
+        }
+        .bg-brand-blue { background-color: var(--brand-blue); }
+        .text-brand-blue { color: var(--brand-blue); }
+        .border-brand-blue { border-color: var(--brand-blue); }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('aluvidrio 10.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); filter: brightness(1.1); }
+        
+        html { scroll-behavior: smooth; }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Solo el Logo -->
+                <a href="#inicio" class="flex items-center">
+                    <img src="aluvidrio 1.png" alt="Logo Aluvidrio El Seri" class="h-14 w-auto object-contain">
+                </a>
+                
+                <div class="hidden md:flex space-x-10 font-bold text-sm uppercase tracking-wider">
+                    <a href="#inicio" class="text-slate-600 hover:text-brand-blue transition">Inicio</a>
+                    <a href="#servicios" class="text-slate-600 hover:text-brand-blue transition">Servicios</a>
+                    <a href="#galeria" class="text-slate-600 hover:text-brand-blue transition">Trabajos</a>
+                    <a href="#contacto" class="text-slate-600 hover:text-brand-blue transition">Contacto</a>
+                </div>
+
+                <div class="flex items-center">
+                    <a href="https://wa.me/1234567890" class="bg-brand-blue text-white px-6 py-3 rounded-xl font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all text-sm uppercase">
+                        Presupuesto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section min-h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-5xl z-10 pt-20">
+            <span class="inline-block bg-brand-blue/20 text-blue-300 px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-8 border border-blue-500/30">
+                Calidad Certificada en Hermosillo
+            </span>
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-8 leading-[0.95] tracking-tighter">
+                PROYECTOS EN <br><span class="text-brand-blue">ALUMINIO Y VIDRIO</span>
+            </h1>
+            <p class="text-lg md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto font-medium leading-relaxed">
+                Fabricación e instalación profesional de ventanas, puertas y canceles. La solución perfecta para tu hogar o comercio.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#contacto" class="bg-brand-blue text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/40 uppercase tracking-wide">
+                    <i class="fas fa-calendar-check mr-2"></i> Agendar Visita
+                </a>
+                <a href="#galeria" class="bg-white/10 backdrop-blur text-white border border-white/30 px-10 py-5 rounded-2xl font-black text-lg hover:bg-white hover:text-brand-blue transition-all uppercase tracking-wide">
+                    Ver trabajos recientes
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#servicios" class="text-white/50 text-2xl hover:text-white transition">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios (Restaurada con Ilustraciones/Iconos) -->
+    <section id="servicios" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight">Nuestros Servicios</h2>
+                <div class="w-24 h-2 bg-brand-blue mx-auto rounded-full mb-8"></div>
+                <p class="text-slate-500 text-xl max-w-2xl mx-auto">Calidad artesanal con tecnología moderna de construcción.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ventanas -->
+                <div class="service-card group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 fade-in-up">
+                    <div class="w-20 h-20 bg-blue-100 text-brand-blue rounded-3xl flex items-center justify-center text-4xl mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase tracking-tight">Ventanas</h3>
+                    <p class="text-slate-600 leading-relaxed">Corredizas, fijas y de proyección en diversas líneas y acabados de aluminio.</p>
+                </div>
+
+                <!-- Puertas -->
+                <div class="service-card group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 fade-in-up">
+                    <div class="w-20 h-20 bg-blue-100 text-brand-blue rounded-3xl flex items-center justify-center text-4xl mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase tracking-tight">Puertas</h3>
+                    <p class="text-slate-600 leading-relaxed">Puertas residenciales de alta seguridad con vidrios templados y marcos reforzados.</p>
+                </div>
+
+                <!-- Canceles -->
+                <div class="service-card group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 fade-in-up">
+                    <div class="w-20 h-20 bg-blue-100 text-brand-blue rounded-3xl flex items-center justify-center text-4xl mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase tracking-tight">Canceles</h3>
+                    <p class="text-slate-600 leading-relaxed">Moderniza tu baño con canceles de cristal templado y herrajes de acero inoxidable.</p>
+                </div>
+
+                <!-- Barandales -->
+                <div class="service-card group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 fade-in-up">
+                    <div class="w-20 h-20 bg-blue-100 text-brand-blue rounded-3xl flex items-center justify-center text-4xl mb-8 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-grip-lines-vertical"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 uppercase tracking-tight">Barandales</h3>
+                    <p class="text-slate-600 leading-relaxed">Soportes de cristal templado para balcones y escaleras con acabados de lujo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería con Nombres aluvidrio # -->
+    <section id="galeria" class="py-32 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6 fade-in-up">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter">Galería de Trabajos</h2>
+                    <p class="text-slate-400 text-lg">Resultados reales que garantizan nuestra experiencia.</p>
+                </div>
+                <a href="https://wa.me/1234567890" class="bg-white/10 hover:bg-white/20 px-8 py-4 rounded-2xl font-bold transition-all border border-white/20">
+                    Solicitar algo similar <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden fade-in-up group relative">
+                    <img src="aluvidrio 6.jpg" alt="Instalación Reciente" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex items-end">
+                        <p class="font-bold text-lg">Residencial Seri</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden fade-in-up group relative">
+                    <img src="aluvidrio 7.jpg" alt="Instalación Reciente" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex items-end">
+                        <p class="font-bold text-lg">Puerta de Acceso</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden fade-in-up group relative">
+                    <img src="aluvidrio 8.jpg" alt="Instalación Reciente" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex items-end">
+                        <p class="font-bold text-lg">Cancel de Baño</p>
+                    </div>
+                </div>
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden fade-in-up group relative">
+                    <img src="aluvidrio 9.jpg" alt="Instalación Reciente" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex items-end">
+                        <p class="font-bold text-lg">Ventanal Panorámico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-slate-50 rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row border border-slate-200">
+                <div class="lg:w-2/5 bg-brand-blue p-12 md:p-16 text-white flex flex-col justify-between relative overflow-hidden">
+                    <!-- Elemento decorativo -->
+                    <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                    
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-black mb-10 leading-tight uppercase tracking-tight">Solicita tu Cotización</h2>
+                        <div class="space-y-10">
+                            <div class="flex items-center space-x-6">
+                                <div class="bg-white/20 p-5 rounded-2xl"><i class="fas fa-phone-alt text-2xl"></i></div>
+                                <div>
+                                    <p class="text-white/60 text-xs font-black uppercase tracking-widest mb-1">WhatsApp Directo</p>
+                                    <p class="text-xl font-bold">(662) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <div class="bg-white/20 p-5 rounded-2xl"><i class="fas fa-envelope text-2xl"></i></div>
+                                <div>
+                                    <p class="text-white/60 text-xs font-black uppercase tracking-widest mb-1">Correo</p>
+                                    <p class="text-xl font-bold">info@aluvidrioelseri.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <div class="bg-white/20 p-5 rounded-2xl"><i class="fas fa-map-marker-alt text-2xl"></i></div>
+                                <div>
+                                    <p class="text-white/60 text-xs font-black uppercase tracking-widest mb-1">Ubicación</p>
+                                    <p class="text-xl font-bold">Col. El Seri, Hermosillo, SON.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16 pt-8 border-t border-white/20 flex space-x-8 relative z-10">
+                        <a href="#" class="text-3xl hover:scale-110 transition"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="text-3xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5 p-12 md:p-16 bg-white">
+                    <form id="contactForm" class="space-y-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="relative">
+                                <input type="text" id="name" required class="peer w-full border-b-2 border-slate-200 py-4 focus:border-brand-blue outline-none transition placeholder-transparent bg-transparent" placeholder="Nombre">
+                                <label for="name" class="absolute left-0 -top-4 text-slate-500 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-brand-blue peer-focus:text-xs font-black uppercase">Tu Nombre</label>
+                            </div>
+                            <div class="relative">
+                                <input type="tel" id="phone" required class="peer w-full border-b-2 border-slate-200 py-4 focus:border-brand-blue outline-none transition placeholder-transparent bg-transparent" placeholder="Teléfono">
+                                <label for="phone" class="absolute left-0 -top-4 text-slate-500 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-brand-blue peer-focus:text-xs font-black uppercase">WhatsApp</label>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <select id="service" class="w-full border-b-2 border-slate-200 py-4 focus:border-brand-blue outline-none transition font-bold bg-transparent">
+                                <option disabled selected>Selecciona un Servicio</option>
+                                <option>Ventanas</option>
+                                <option>Puertas</option>
+                                <option>Canceles de Baño</option>
+                                <option>Barandales</option>
+                                <option>Otro Proyecto</option>
+                            </select>
+                        </div>
+                        <div class="relative">
+                            <textarea id="message" rows="3" class="peer w-full border-b-2 border-slate-200 py-4 focus:border-brand-blue outline-none transition placeholder-transparent bg-transparent" placeholder="Mensaje"></textarea>
+                            <label for="message" class="absolute left-0 -top-4 text-slate-500 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-brand-blue peer-focus:text-xs font-black uppercase">Detalles del trabajo</label>
+                        </div>
+                        <button type="submit" class="w-full bg-slate-900 text-white py-6 rounded-2xl font-black text-xl hover:bg-brand-blue transition-all shadow-xl hover:shadow-blue-500/20 uppercase tracking-widest">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                    <div id="formStatus" class="mt-8 text-center hidden p-5 rounded-2xl font-bold"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            <img src="aluvidrio 1.png" alt="Logo" class="h-20 mb-10 grayscale brightness-200 opacity-50">
+            <div class="flex flex-wrap justify-center gap-12 font-black text-sm uppercase tracking-[0.2em] mb-12">
+                <a href="#inicio" class="hover:text-white transition">Inicio</a>
+                <a href="#servicios" class="hover:text-white transition">Servicios</a>
+                <a href="#galeria" class="hover:text-white transition">Trabajos</a>
+                <a href="#contacto" class="hover:text-white transition">Contacto</a>
+            </div>
+            <div class="w-full border-t border-slate-800 pt-10 text-center">
+                <p class="text-xs font-bold tracking-widest uppercase mb-2">&copy; 2024 Aluvidrio El Seri</p>
+                <p class="text-[10px] text-slate-600">Hermosillo, Sonora, México</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20un%20presupuesto%20de%20aluminio%20y%20vidrio." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const observe = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observe.observe(el));
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const status = document.getElementById('formStatus');
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-sync fa-spin mr-3"></i> Procesando...';
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = 'Enviar Solicitud';
+                status.className = 'mt-8 text-center p-5 rounded-2xl font-bold bg-green-500/10 text-green-400 block';
+                status.innerText = '¡Solicitud enviada! Nos pondremos en contacto contigo a la brevedad.';
+                this.reset();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
